@@ -2,6 +2,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useContext, useState } from "react";
 import { GlobalContext } from "../Context/GlobalState";
 import { v4 as uuid } from "uuid";
+import axios from "axios"
 
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 
@@ -23,6 +24,7 @@ const AddUser = () => {
       gender,
     };
     addUser(newUser);
+    axios.post("https://crudcrud.com/",newUser)
     history.push("/");
   };
   const getGender = (e) => {
