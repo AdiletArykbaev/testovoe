@@ -42,3 +42,4 @@ export const GlobalProvider = ({children})=>{
 
 
 }
+localStorage.setItem("state", JSON.stringify(initialState.users))

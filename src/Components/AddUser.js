@@ -28,7 +28,6 @@ const AddUser= ()=> {
             name,
             gender,
         }
-        console.log(GlobalContext._currentValue)
         addUser(newUser)
         history.push("/")
     }

@@ -8,7 +8,8 @@ export default (state,action)=>{
             }
         case "ADD_USER":
             return {
-                users : [action.payload,...state.users]
+                users : [action.payload,...state.users],
+
             }
         case "EDIT_USER":
             const updatedUser = action.payload;
