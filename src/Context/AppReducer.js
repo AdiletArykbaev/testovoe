@@ -7,6 +7,7 @@ export default (state,action)=>{
                 })
             }
         case "ADD_USER":
+            localStorage.setItem("state",JSON.stringify([action.payload,...state.users]))
             return {
                 users : [action.payload,...state.users],
 
