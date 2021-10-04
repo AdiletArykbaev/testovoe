@@ -1,13 +1,13 @@
-import UserList from "./UserList"
-import Heading from "./Heading"
+import UserList from "./UserList";
+import Heading from "./Heading";
 
-const Home= ()=> {
-    return (
-        <>
-            <Heading/>
-            <UserList/>
-        </>
-    );
-}
+const Home = () => {
+  return (
+    <>
+      <Heading />
+      <UserList />
+    </>
+  );
+};
 
 export default Home;
