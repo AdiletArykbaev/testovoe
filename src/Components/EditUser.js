@@ -62,10 +62,10 @@ const EditUser= (props)=> {
 
                     </Input>
                 </div>
-                <div>
-                    <input value={selectedUser.gender} type="radio"  name="gender" id="male" value="male"/>
+                <div >
+                    <input  type="radio"  name="gender" id="male" value="male"/>
                     <label htmlFor="male">мужской</label>
-                    <input value={selectedUser.gender}  type="radio"  name="gender" id="female" value="female"/>
+                    <input  type="radio"  name="gender" id="female" value="female"/>
                     <label htmlFor="female">женский</label>
                 </div>
 

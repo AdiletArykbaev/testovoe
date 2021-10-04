@@ -1,10 +1,14 @@
 export default (state,action)=>{
+
     switch (action.type){
         case "REMOVE_USER":
+            let UserToDelete=  state.users.filter(user=>{
+                return user.key !== action.payload
+            })
+            localStorage.setItem("state", JSON.stringify(UserToDelete))
+
             return {
-                users: state.users.filter(user=>{
-                    return user.key !== action.payload
-                })
+                users:UserToDelete
             }
         case "ADD_USER":
             localStorage.setItem("state",JSON.stringify([action.payload,...state.users]))
@@ -19,7 +23,10 @@ export default (state,action)=>{
                     return updatedUser;
                 }
                 return user
+
             })
+            localStorage.setItem("state", JSON.stringify(updateUsers))
+
             return {
                 users:updateUsers
             }
